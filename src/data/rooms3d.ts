@@ -1,4 +1,5 @@
 import type { FurniturePiece, Room3D } from "./types";
+import { asset } from "../utils";
 
 // Geometry only. Coordinates are room-local (each room is rebuilt fresh when
 // entered): X = east(+)/west(-), Z = south(+)/north(-), Y = up. Doors carry
@@ -211,8 +212,8 @@ export const ROOMS_3D: Record<string, Room3D> = {
       { pos: [-3.8, 1.6, 0], width: 1.2, height: 1.4, rotationY: 90, baseColor: "#4a463c" },
     ],
     photoPlanes: [
-      { pos: [-1.8, 1.5, -3.35], width: 0.82, height: 0.52, src: "/photos/pr01-event-photo.png" },
-      { pos: [-0.2, 1.5, -3.35], width: 0.82, height: 0.52, src: "/photos/pr02-group-activity-photo.png" },
+      { pos: [-1.8, 1.5, -3.35], width: 0.82, height: 0.52, src: asset("photos/pr01-event-photo.png") },
+      { pos: [-0.2, 1.5, -3.35], width: 0.82, height: 0.52, src: asset("photos/pr02-group-activity-photo.png") },
     ],
   },
 

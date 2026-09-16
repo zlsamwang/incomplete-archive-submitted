@@ -2,6 +2,8 @@
 // Everything meaningful in the game is available without sound (see the
 // listening room's full transcript), so this layer is purely atmospheric.
 
+import { asset } from "./utils";
+
 let ctx: AudioContext | null = null;
 let master: GainNode | null = null;
 let droneNodes: { osc: OscillatorNode; gain: GainNode }[] = [];
@@ -13,7 +15,7 @@ let mutedFlag = false;
 // m4a) and it plays automatically; if the file is missing, this fails
 // silently and the game runs exactly as before. See README.md's "Adding
 // background music" section.
-const MUSIC_SRC = "/music/background.mp3";
+const MUSIC_SRC = asset("music/background.mp3");
 const MUSIC_VOLUME = 0.35;
 let musicEl: HTMLAudioElement | null = null;
 let musicStarted = false;

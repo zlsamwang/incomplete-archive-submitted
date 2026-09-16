@@ -1,4 +1,5 @@
 import type { RecordingLine, RecordingSegment } from "./types";
+import { asset } from "../utils";
 
 // Full accessible transcripts, used for both the timed "playback" (a written
 // form unfolding in time, standing in for audio we can't record with real
@@ -82,7 +83,7 @@ export const RECORDINGS: Record<string, RecordingLine[]> = {
 // points used to sync/seek this audio, so retune them once a real recording
 // exists if the pacing drifts.
 export const RECORDING_AUDIO: Record<string, string> = {
-  "LR-01": "/audio/lr-01-message.mp3",
+  "LR-01": asset("audio/lr-01-message.mp3"),
 };
 
 // The audio file need not cover the whole transcript — lr-01-message.mp3 is

@@ -1,4 +1,5 @@
 import type { Evidence } from "./types";
+import { asset } from "../utils";
 
 // ---------------------------------------------------------------------------
 // A VOICE THAT CAME LATE — evidence data
@@ -488,8 +489,8 @@ export function getEvidence(id: string): Evidence | undefined {
 // line-art sketch; if it's missing, the sketch is shown instead — see
 // public/photos/README.txt.
 export const EVIDENCE_PHOTOS: Record<string, string> = {
-  "PR-01": "/photos/pr01-event-photo.png",
-  "PR-02": "/photos/pr02-group-activity-photo.png",
+  "PR-01": asset("photos/pr01-event-photo.png"),
+  "PR-02": asset("photos/pr02-group-activity-photo.png"),
 };
 
 export function getEvidencePhoto(id: string): string | undefined {
